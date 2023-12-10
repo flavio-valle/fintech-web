@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'standard-gray': '#3C3C3C',
+                        'gold': '#F2C94C',
+                        'gold-900': '#d6a81d'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="flex items-center justify-between p-4 bg-standard-gray">
+            <div class="flex items-center">
+                <img class="w-12 mr-2" src="/fintech-web/img/logo.png" alt="logo">
+                <h1 class="text-white font-bold">Fintech Web</h1>
+            </div>
+            <div class="sm:hidden">
+                <button id="menuBtn" type="button" class="text-white hover:text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="navLinks" class="hidden translate-x-full sm:flex">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-white group hover:text-gray-300">
+                            Home
+                            <hr class="bg-white w-0 group-hover:w-full duration-500 transition-all">
+                        </a>
+                    </li>
+                    <li><a href="#" class="text-white group hover:text-gray-300">
+                            Sobre Nós
+                            <hr class="bg-white w-0 group-hover:w-full duration-500 transition-all">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white group hover:text-gray-300">
+                            Serviços
+                            <hr class="bg-white w-0 group-hover:w-full duration-500 transition-all">
+                        </a>
+                    </li>
+                    <li><a href="#" class="text-white group hover:text-gray-300">
+                            Contatos
+                            <hr class="bg-white w-0 group-hover:w-full duration-500 transition-all">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-[#464646] block h-screen sm:flex items-center justify-center">
+        <div class="bg-standard-gray flex flex-col justify-center p-10 rounded shadow-md h-screen my-auto sm:h-auto">
+            <div class="logo flex justify-center">
+                <img class="w-96" src="/fintech-web/img/logo.png" alt="logo">
+            </div>
+            <form class="">
+                <div class="mb-4">
+                    <label for="email" class="block mb-2">
+                        <fieldset>
+                            <legend class="text-sm text-gold">Email</legend>
+                        </fieldset>
+                    </label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded">
+                </div>
+                <div class="mb-4 text-gold">
+                    <label for="password" class="block mb-2">
+                        <fieldset>
+                            <legend class="text-sm">Password</legend>
+                        </fieldset>
+                    </label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border rounded">
+                </div>
+                <div class="flex mb-4">
+                    <div class="text-gold flex items-center justify-start mr-10 ml-[1px]">
+                        <input type="checkbox" id="remember" class="mr-3 accent-gold">
+                        <label for="remember">Lembrar-me</label>
+                    </div>
+                    <a href="#" class="text-blue-500">Forgot password?</a>
+                </div>
+                <button type="submit"
+                    class="w-full bg-gold text-standard-gray hover:bg-yellow-700 transition-all duration-[0.3s] py-2 px-4 rounded">Login</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+        document.getElementById('navLinks').classList.toggle('hidden');
+    });
+</script>
+</html>
